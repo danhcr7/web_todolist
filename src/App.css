@@ -198,10 +198,12 @@ margin: 0px;
    MOBILE RESPONSIVE (Code sửa lỗi hoàn chỉnh)
    Áp dụng cho tất cả màn hình điện thoại (dưới 768px)
    ====================================================== */
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 270px) {
   
   /* 1. KHUNG BAO NGOÀI (Todolist) */
   .Todolist {
+    display: flex;
+    flex-direction: column !important; /* XẾP DỌC */
     width: 96% !important;        /* Chiếm gần hết bề ngang điện thoại */
     height: 95vh !important;      /* Chiều cao chiếm 95% màn hình thiết bị */
     margin: 10px auto !important; /* Căn giữa */
@@ -210,56 +212,68 @@ margin: 0px;
 
   /* 2. HEADER (Chữ Todo App + Ô Input) - QUAN TRỌNG */
   .session-header {
-    flex: 0 0 auto !important;        /* Không co giãn theo tỷ lệ cũ nữa */
-    flex-direction: column !important; /* XẾP DỌC: Tiêu đề trên, Input dưới */
-    height: auto !important;          /* Chiều cao tự động theo nội dung */
-    padding: 15px 0 !important;       /* Khoảng cách trên dưới */
-    gap: 10px;                        /* Khoảng cách giữa chữ và ô input */
-  }
+        color: #ff0404;
+        font-size: 30px;
+        /* background-image: url(./Components/Todolist/image/background1.jpg); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid red;
+        flex: 1 1 0;
+    }
 
   /* Chỉnh lại ô Input để hiện rõ ràng */
   .session-header input {
     width: 90% !important;    /* Rộng 90% khung */
     height: 40px !important;  /* Chiều cao ô nhập liệu */
     font-size: 16px !important;
-    border: 1px solid #ccc;   /* Thêm viền nhẹ để dễ nhìn */
+    border: 1px solid #ff0000;   /* Thêm viền nhẹ để dễ nhìn */
     border-radius: 5px;
     padding-left: 10px;       /* Cách lề chữ bên trong */
   }
 
   /* 3. KHU VỰC NÚT BẤM (Thêm, Xóa, Connect) */
-  .session-button {
-    flex: 0 0 auto !important;
-    height: auto !important;
-    padding-bottom: 15px;
+      .session-button {
+        gap: 2px;
+        flex: 6 1 0;
+        display: flex;
+        flex-direction: column;
+        border: 3px solid red;
+    }
+  .box-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 2 1 0;
+    width: 100%;
+    border: 2px solid rgb(183, 255, 2);
   }
-
   /* Xếp các nút thành hàng dọc để dễ bấm trên đt nhỏ */
   .box-2 {
-    display: flex !important;
-    flex-direction: column !important; /* Xếp dọc */
-    width: 100% !important;
-    align-items: center !important;
-    gap: 10px !important;              /* Khoảng cách giữa các nút */
+    width: 100%;
+    flex: 4 1 0;
+    border: 2px solid rgb(0, 38, 255);
+    display: flex;
+    flex-direction: column; /* Xếp dọc */
+    width: 100% ;
+    align-items: center ;             /* Khoảng cách giữa các nút */
   }
 
   .session-button button {
-    width: 90% !important;    /* Nút to, dễ bấm */
-    height: 45px !important;  /* Nút cao hơn */
+    width: 60% !important;    /* Nút to, dễ bấm */
+    height: 25px !important;  /* Nút cao hơn */
     margin: 0 !important;     /* Bỏ margin cũ */
     font-size: 18px !important;
   }
 
   /* 4. DANH SÁCH CÔNG VIỆC (Phần hiển thị kết quả) */
-  .session-content {
-    flex: 1 1 auto !important;  /* Tự động chiếm hết khoảng trống còn lại bên dưới */
-    font-size: 20px !important; /* Cỡ chữ vừa phải */
-    width: 100% !important;
-    overflow-y: auto;           /* Cho phép cuộn nếu danh sách dài */
-  }
+     .session-content {
+        flex: 3 1 0;
+        font-size: 20px !important;
+        width: 100% !important;
+        overflow-y: auto;
+    }
+
 
   /* Ẩn các box đệm không cần thiết trên mobile */
-  .box-1 {
-    display: none !important;
-  }
 }
