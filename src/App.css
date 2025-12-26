@@ -1,7 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .App {
   text-align: center;
 }
+* {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -34,5 +41,254 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid red;
+  height: 100%;
+}
+/* .container-item {
+flex-direction: column;
+display: flex;
+border: 2px solid rgb(21, 0, 255);
+width: 25%;
+height: 70%;
+} */
+/* .innerBox {
+display: flex;
+flex-direction: column;
+justify-content: center; 
+align-items: center; 
+border: 2px solid blue;
+width: 50%;
+gap: 4%;
+padding: 3%;
+}
+.sestion-Result {
+display: flex;
+justify-content: center;
+align-items: center;
+border: 2px solid #000;
+width: 70%;
+margin: 2%;
+padding: 4%;
+font-size: 20%;
+}
+.clickMe {
+border-radius: 2%;
+color: red;
+background-color: #61dafb;
+}
+.render {
+width: 50%;
+border: 2px solid #000;
+font-size: 25%;
+} */
+/* .boxx {
+font-size: 70px;
+flex: 8 1 0;
+border: 2px solid rgb(8, 0, 255);
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+} */
+/* .session-btn {
+flex: 2 1 0;
+}
+.btn_click_cong,
+.btn_click_tru,
+.btn_click_reset {
+font-size: 35px;
+flex: 2 1 0;
+border: 2px solid blue;
+}
+.session-btn {
+display: flex;
+}
+.btn_click_cong {
+flex: 3333 1 0;
+}
+.btn_click_tru {
+flex: 3333 1 0;
+}
+.btn_click_reset {
+flex: 3333 1 0;
+} */
+/* Viết CSS cho todolist */
+.Todolist {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid blue;
+  width: 30%;
+  height: 75%;
+  background-image: url(./Components/Todolist/image/background1.jpg);
+}
+.session-header {
+  color: white;
+  /* background-image: url(./Components/Todolist/image/background1.jpg); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+  flex: 15 1 0;
+}
+.session-button {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+  /* background-color: #33ff00; */
+  flex: 20 1 0;
+  gap: 5%;
+  /* margin-left: 5%;
+  margin-right: 5%; */
+}
+.box-1 {
+  /* border: 2px solid blue; */
+  flex: 3 1 0;
+}
+.box-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid blue; */
+  flex: 7 1 0;
+  width: 100%;
+}
+.session-content {
+  /* border: 1px solid red; */
+  /* background-color: white; */
+  flex: 65 1 0;
+}
+.session-button button {
+  width: 35%;
+  height: 45%;
+  border-radius: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.session-content {
+  white-space: pre-wrap;
+  overflow-y: auto;
+  height: 100%;
+  background-color: aliceblue;
+  color: red;
+  font-size: 50px;
+  border: 2px solid rgb(0, 255, 64);
+  margin: 0px;
+}
+
+
+/* =========================================
+   RESPONSIVE CHO ĐIỆN THOẠI (MOBILE)
+   ========================================= */
+@media only screen and (max-width: 768px) {
+  /* 1. Điều chỉnh khung chính to ra để dễ nhìn trên đt */
+  .Todolist {
+    width: 95%;        /* Tăng từ 30% lên 95% chiều ngang màn hình */
+    height: 85%;       /* Tăng chiều cao lên một chút cho thoáng */
+    border-width: 1px; /* Giảm độ dày viền cho thanh thoát */
+  }
+
+  /* 2. Giảm cỡ chữ phần nội dung công việc */
+  .session-content {
+    font-size: 24px;   /* Giảm từ 50px xuống 24px để không bị tràn */
+    padding: 10px;     /* Thêm đệm để chữ không sát mép viền */
+  }
+
+  /* 3. Chỉnh lại khu vực chứa nút bấm */
+  .box-2 {
+    flex-wrap: wrap;   /* Cho phép nút xuống dòng nếu màn hình quá bé */
+    gap: 10px;         /* Khoảng cách giữa các nút */
+  }
+
+  /* 4. Tinh chỉnh từng nút bấm */
+  .session-button button {
+    width: auto;       /* Để nút tự co giãn theo chữ bên trong hoặc */
+    min-width: 80px;   /* Đảm bảo nút không quá bé */
+    flex-grow: 1;      /* Cho nút tự giãn đều nhau */
+    height: 40px;      /* Chiều cao nút vừa ngón tay bấm */
+    font-size: 16px;   /* Cỡ chữ trong nút */
+    margin: 0;         /* Bỏ margin cũ để dùng gap cho đẹp */
+  }
+  
+  /* 5. (Tùy chọn) Ẩn viền đỏ debug của thẻ root đi cho đẹp */
+  #root {
+    border: none; 
+  }
+}
+
+
+/* =========================================
+   FIX LỖI MÀN HÌNH SIÊU NHỎ (< 400px)
+   (Dành cho trường hợp 273px của bạn)
+   ========================================= */
+@media only screen and (max-width: 400px) {
+  /* 1. Mở rộng tối đa khung chính */
+  .Todolist {
+    width: 98% !important;   /* Chiếm gần hết màn hình */
+    height: 90% !important;  /* Tăng chiều cao để không bị ngắn */
+    border: 1px solid blue;  /* Viền mỏng lại */
+  }
+
+  /* 2. Xử lý phần Header (Chữ 'Todo App' và Input) */
+  .session-header {
+    flex: 0 0 auto !important; /* Bỏ tỷ lệ flex cũ, để nó tự co giãn theo nội dung */
+    margin-bottom: 10px;
+  }
+  
+  /* Chỉnh lại ô input/label nhập việc */
+  .session-header input, 
+  .session-header label,
+  .session-header span {
+    font-size: 16px !important; /* Chữ bé lại để vừa khung */
+    width: 90%;                 /* Input không được quá to */
+  }
+
+  /* 3. Xử lý phần nút bấm (QUAN TRỌNG NHẤT) */
+  .session-button {
+    flex-direction: column !important; /* Bắt buộc xếp dọc */
+    align-items: center !important;    /* Căn giữa */
+    justify-content: flex-start !important;
+    gap: 8px !important;               /* Khoảng cách giữa các nút */
+    padding: 5px 0;
+    flex: 1 1 auto !important;         /* Cho phép co giãn tự do */
+  }
+
+  /* Chỉnh từng nút bấm */
+  .session-button button {
+    width: 80% !important;   /* Nút chiếm 80% chiều ngang khung */
+    height: 35px !important; /* Chiều cao cố định nhỏ gọn */
+    margin: 0 !important;    /* Xóa bỏ lề thừa */
+    font-size: 14px !important; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* 4. Ẩn bớt các box thừa nếu có (box-1, box-2 cũ gây chật) */
+  .box-1 {
+    display: none; /* Ẩn cục box rỗng nếu không cần thiết trên mobile */
+  }
+  
+  .box-2 {
+    flex-direction: column;
+    width: 100%;
   }
 }
