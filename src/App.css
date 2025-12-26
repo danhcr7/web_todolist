@@ -274,7 +274,9 @@ margin: 0px;
         width: 100% !important;
         overflow-y: auto;
     }
-
+  .box-1 input {
+    width: 75%;
+  }
 
   /* Ẩn các box đệm không cần thiết trên mobile */
 }
