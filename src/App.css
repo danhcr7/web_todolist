@@ -198,7 +198,7 @@ margin: 0px;
    MOBILE RESPONSIVE (Code sửa lỗi hoàn chỉnh)
    Áp dụng cho tất cả màn hình điện thoại (dưới 768px)
    ====================================================== */
-@media screen and (max-width: 270px) {
+@media screen and (max-width: 299px) {
   
   /* 1. KHUNG BAO NGOÀI (Todolist) */
   .Todolist {
